@@ -20,13 +20,13 @@
   <script>
     System.config({
             packages: {
-                "dist/src": {
+                "dist": {
                     format: 'register',
                     defaultExtension: 'js'
                 }
             }
         });
-        System.import('dist/src/bootstrap')
+        System.import('dist/bootstrap')
                 .then(null, console.error.bind(console));
   </script>
 </head>
