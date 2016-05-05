@@ -1,6 +1,6 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
-
+import { Main } from './main.component';
 
 @Component({
   selector: 'app',
@@ -13,3 +13,5 @@ export class App {}
 bootstrap(App)
   .then(success => console.log('Kicking off Countries and Capitals'))
   .catch(error => console.log(error));
+
+bootstrap(Main);
