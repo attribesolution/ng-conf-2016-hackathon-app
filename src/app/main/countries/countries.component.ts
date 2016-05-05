@@ -3,8 +3,8 @@ import {ROUTER_DIRECTIVES} from 'angular2/router';
 @Component({
     moduleId: 'countriesModule',
     selector: 'countries',
-    templateUrl: 'src/app/countries/countries.view.html',
-    styleUrls:['src/app/countries/countries.styles.css'],
+    templateUrl: 'src/app/main/countries/countries.view.html',
+    styleUrls:['src/app/main/countries/countries.styles.css'],
     directives: [ROUTER_DIRECTIVES]
 })
 export class CountriesComponent implements OnInit {

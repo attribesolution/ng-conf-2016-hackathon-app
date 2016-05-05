@@ -28,6 +28,10 @@ a.btn{
     text-decoration: none;
 }
 
+.main-view-container{
+    margin: 40px;
+}
+
 /* APP COMPONENT STYLES*/
 
 .header {
