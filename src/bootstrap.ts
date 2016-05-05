@@ -8,7 +8,8 @@ import { Dashboard } from './dashboard';
   template: `
   	<h1 style="margin-left:40%;">Countries and Capitals</h1>
     <my-dashboard></my-dashboard>
-  `,
+  `
+  
 })
 export class App {}
 
