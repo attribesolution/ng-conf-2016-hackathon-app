@@ -5,10 +5,13 @@ import {Component} from 'angular2/core';
 @Component({
   selector: 'app',
   template: `
-  	<h1>Countries and Capitals</h1>
+  	<h1>{{title}}</h1>
   `,
 })
-export class App {}
+export class App {
+  title: string = "Countries and Capitols";
+  
+}
 
 bootstrap(App)
   .then(success => console.log('Kicking off Countries and Capitals'))
