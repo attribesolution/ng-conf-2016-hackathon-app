@@ -16,6 +16,9 @@ import {Countries} from './countries';
   directives: [Header, SideBar, Countries] // ROUTER_DIRECTIVES
 })
 
+// ################################################
+// Router code commented out till the next session
+
 // @RouteConfig([
 //   {path: '/countries_capitals',   name: 'Countries',     component: Countries},
 //   // {path: '/about', name: 'About', component: AboutComponent},
