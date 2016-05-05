@@ -6,7 +6,6 @@ import {Component} from 'angular2/core';
   
   template: `
   	<h1 class='my-intro'>{{intro}}</h1>
- 
   `,
   styles: [`
     .my-intro {

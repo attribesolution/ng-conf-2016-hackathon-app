@@ -1,12 +1,12 @@
 import {Component} from 'angular2/core';
-
+import {RouterLink} from 'angular2/router';
 
 @Component({
   selector: 'my-footer',
-  
+  directives: [RouterLink],
   template: `
 <div class="button">  	
-<button class="btn1" > Browse Countries </button>
+<button class="btn1" [routerLink]="['/Countries']" > Browse Countries </button>
  <\div> `,
 styles: [`
     .my-footer {
