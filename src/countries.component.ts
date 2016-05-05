@@ -1,21 +1,9 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
-import { CountriesComponent } from './countries.component';
-import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
-
-
-
-// @RouteConfig([
-//   {
-//     path: '/countries',
-//     name: 'countries',
-//     component: CountriesComponent
-//   }
-// ])
-
+import {CountriesComponent} from './countries';
 
 @Component({
-  selector: 'app',
+  selector: 'countries',
   template: `
   	<h1 class="aligncenter">Countries and Capitals</h1>
   	<hr>
@@ -38,8 +26,8 @@ import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
 			}
 			`]
 })
-export class App {}
+export class CountriesComponent {}
 
-bootstrap(App)
+bootstrap(CountriesComponent)
   .then(success => console.log('Kicking off Countries and Capitals'))
   .catch(error => console.log(error));
