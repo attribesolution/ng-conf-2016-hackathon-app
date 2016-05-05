@@ -5,7 +5,7 @@ import {Component} from 'angular2/core';
 @Component({
     selector: 'footer',
     template: `
-  	<button (click)="goToDetails()">See Details</button>
+  	<div style="text-align: center"><button (click)="goToDetails()">See Details</button></div>
   `,
 })
 export class Footer {
