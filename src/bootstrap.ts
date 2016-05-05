@@ -1,11 +1,13 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
-
+import { Dashboard } from './dashboard';
 
 @Component({
   selector: 'app',
+  directives: [Dashboard],
   template: `
-  	<h1>Countries and Capitals</h1>
+  	<h1 style="margin-left:40%;">Countries and Capitals</h1>
+    <my-dashboard></my-dashboard>
   `,
 })
 export class App {}
