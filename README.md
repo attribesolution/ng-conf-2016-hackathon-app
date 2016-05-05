@@ -1,6 +1,6 @@
 # ng-conf-2016 Hackathon Starter Project
 
-For the installation and update of npm and node click <a href="">here</a>
+For the installation and update of npm and node click <a href="https://github.com/attribesolution/ng-conf-2016-hackathon-app/wiki/npm-&-node-Installation-or-update">here</a>
 ### Steps:
 
 ```bash
