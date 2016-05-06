@@ -1,34 +1,38 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import { CountriesComponent } from './countries.component';
-import { ROUTER_DIRECTIVES, Routes } from '@angular/router';
+import { CountryComponent } from './country.component';
+import { LandingComponent } from './landing.component';
 
 
-
-// @RouteConfig([
-//   {
-//     path: '/countries',
-//     name: 'countries',
-//     component: CountriesComponent
-//   }
-// ])
+@RouteConfig([
+  {
+    path: '/countries',
+    name: 'Countries',
+    component: CountriesComponent
+  },
+  {
+    path: '/',
+    name: 'Landing',
+    component: LandingComponent
+  },
+  {
+    path: '/countries/:id',
+    name: 'Country',
+    component: CountryComponent
+  }
+])
 
 
 @Component({
   selector: 'app',
   template: `
   	<h1 class="aligncenter">Countries and Capitals</h1>
-  	<hr>
-  	<div>
-  		<div class="inner-div">
-  		lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum 
-      <br><br><br>
-      <a href="" class="aligncenter">Browse Countries</a>
-
-  		</div>
-      <br>
-  	</div>
+      <router-outlet></router-outlet>
   `,
+  directives: [ROUTER_DIRECTIVES],
+  providers: [ROUTER_PROVIDERS],
 	styles: [`
 			.aligncenter {
 				text-align:center;

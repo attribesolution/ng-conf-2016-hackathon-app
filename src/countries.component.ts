@@ -1,33 +1,63 @@
-import {bootstrap} from 'angular2/platform/browser';
 import {Component} from 'angular2/core';
-import {CountriesComponent} from './countries';
+import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import 'rxjs/add/operator/map';
+import {CountriesService} from './countries.service'
+import {ROUTER_DIRECTIVES, RouterLink} from 'angular2/router';
+
+// import { CountryService } from './countries.service';
 
 @Component({
   selector: 'countries',
-  template: `
-  	<h1 class="aligncenter">Countries and Capitals</h1>
-  	<hr>
-  	<div>
-  		<div class="inner-div">
-  		lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum lorem ispum 
-      <br><br><br>
-      <a href="" class="aligncenter">Browse Countries</a>
+  template: `<div class="aligncenter"><ul>
+  	<table border=2>
+  		<thead>
+  			<tr>
+  				<th>Name</th>
+  				<th>Country Code</th>
+  			</tr>
+		    <tr  [routerLink]="['/Country', { id: country.countryCode }]" *ngFor="let country of countries" >
+  				<th>  {{country.countryName}}</th>
+  				<th>{{country.countryCode}}</th>
+		    </tr>
+  		</thead>
+  	</table>
 
-  		</div>
-      <br>
-  	</div>
+  </ul>
+  </div>
   `,
+ providers: [RouterLink, HTTP_PROVIDERS, CountriesService],
+ directives: [ROUTER_DIRECTIVES],
 	styles: [`
 			.aligncenter {
-				text-align:center;
+				margin-left:35%;
 			}
-			.inner-div {
-			padding:100px;
+			table {
 			}
 			`]
 })
-export class CountriesComponent {}
 
-bootstrap(CountriesComponent)
-  .then(success => console.log('Kicking off Countries and Capitals'))
-  .catch(error => console.log(error));
+export class CountriesComponent {
+
+public countries_error:Boolean = false;
+ 
+
+
+  constructor(private _countryService: CountriesService) { }
+
+	ngOnInit() {
+		this.getCountries();
+	}
+
+ 
+  getCountries() {
+    this._countryService.getCountries().subscribe(
+      data => { 
+      	this.countries = data.geonames;
+      },
+      err => { this.countries_error = true }
+    );
+  }
+
+
+}
+
