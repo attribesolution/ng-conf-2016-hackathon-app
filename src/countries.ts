@@ -5,13 +5,13 @@
 import {Component} from 'angular2/core';
 import {RouterLink} from 'angular2/router'
 
-
 @Component({
-    selector: 'my-footer',
-    templateUrl: './../views/footer.html',
-    styleUrls:['./css/style.css', './css/bootstrap.css'],
+    selector: 'Countries',
+    templateUrl: './views/countries.html',
+    styleUrls: ['./css/bootstrap.css'],
     directives: [RouterLink]
 
 })
 
-export class myFooter {}
+export class Countries{}
+

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-
+    <base href="/">
   <meta charset="UTF-8">
   <title>Angular 2 - Countries and Capitals</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,11 +17,11 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
 
   <!-- 2. Configure SystemJS -->
   <script>
     System.config({
-            baseUrl: '/taha',
             packages: {
                 "dist": {
                     format: 'register',
@@ -38,7 +38,7 @@
 <!-- 3. Display the application -->
 
 <body>
-    <RouterOutlet></RouterOutlet>
+    <app>Loading...</app>
 </body>
 
 </html>
