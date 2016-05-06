@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
+    <base href="/">
   <meta charset="UTF-8">
   <title>Angular 2 - Countries and Capitals</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- 1. Load libraries -->
   <!-- IE required polyfills, in this exact order -->
+
   <script src="node_modules/es6-shim/es6-shim.min.js"></script>
   <script src="node_modules/systemjs/dist/system-polyfills.js"></script>
   <script src="node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
@@ -15,6 +17,7 @@
   <script src="node_modules/systemjs/dist/system.src.js"></script>
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+    <script src="node_modules/angular2/bundles/router.dev.js"></script>
 
   <!-- 2. Configure SystemJS -->
   <script>
@@ -29,12 +32,13 @@
         System.import('dist/bootstrap')
                 .then(null, console.error.bind(console));
   </script>
+
 </head>
 
 <!-- 3. Display the application -->
 
 <body>
-  <app>Loading...</app>
+    <app>Loading...</app>
 </body>
 
 </html>
