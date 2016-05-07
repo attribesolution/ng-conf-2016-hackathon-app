@@ -39,7 +39,7 @@ import {ROUTER_DIRECTIVES, RouterLink} from 'angular2/router';
 export class CountriesComponent {
 
 public countries_error:Boolean = false;
- 
+public countries:Object = []; 
 
 
   constructor(private _countryService: CountriesService) { }

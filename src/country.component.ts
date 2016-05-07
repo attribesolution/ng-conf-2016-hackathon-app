@@ -40,8 +40,9 @@ export class CountryComponent {
 
   public country_error:Boolean = false;
   public geoNameId:String = '';
-
-
+  public countries:Object = [];
+  public neighbours:Object = [];
+  
   constructor(private _countryService: CountryService, params: RouteParams ) {
     _countryService.country = params.get('id');
   }
