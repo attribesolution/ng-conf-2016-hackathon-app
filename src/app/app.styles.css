@@ -1,0 +1,36 @@
+/*GLOBAL STYLES*/
+
+.btn{
+    border:1px solid grey;
+    border-radius: 4px;
+    padding: 4px 10px;
+    color:black;
+    
+}
+
+.text-center{
+    text-align: center;
+}
+
+.lorem{
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.btn:hover{
+    color: white;
+    background: black;
+    -webkit-transition: 0.4s all ease;
+    -moz-transition: 0.4s all ease;
+    transition: 0.4s all ease;
+}
+a{
+    text-decoration: none;
+}
+
+/* APP COMPONENT STYLES*/
+
+.header {
+    text-align:center;
+    border-bottom:2px solid black;
+}

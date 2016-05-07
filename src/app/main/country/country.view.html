@@ -1,0 +1,21 @@
+<my-spinner [isRunning]="isRequesting" *ngIf="isRequesting"></my-spinner>
+<div class="country-container" *ngIf="!isRequesting">
+    <div class="country-name">
+        <h1>{{country.countryName}}</h1>
+    </div>
+    <div class="country-info">
+        <p>Population : {{country.population}}</p>
+        <p>Area : {{country.areaInSqKm}}</p>
+        <p>Capital : {{country.capital}}</p>
+        <p>Population : {{country.population}}</p>
+        
+        <p *ngIf="neighbours && neighbours.length>0">3 neighbours: 
+            <span *ngFor="let neigh of neighbours|customLimit:3 ; #i=index">
+                <a [routerLink]="['Country',{code:neigh.countryCode}]">
+                    {{neigh.countryName}}
+                </a>
+                <span *ngIf="i<2">,</span>
+            </span>
+        </p>
+    </div>
+</div>

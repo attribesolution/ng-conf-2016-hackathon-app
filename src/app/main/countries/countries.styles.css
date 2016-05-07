@@ -1,0 +1,13 @@
+#countriesTableContainer{
+    max-height: 300px;
+    overflow: auto;
+}
+#countriesTable{
+}
+#countriesTable td{
+    text-align: center;
+}
+#countriesTable tr:hover{
+    background-color: #dcdcdc;
+    cursor: pointer; 
+}

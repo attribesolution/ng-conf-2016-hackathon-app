@@ -1,0 +1,17 @@
+<my-spinner [isRunning]="isRequesting" *ngIf="isRequesting"></my-spinner>
+<!--<div *ngIf="!dataLoaded">Loading Countries....</div>-->
+<div id="countriesTableContainer" *ngIf="!isRequesting">
+    <table style="width:100%" id="countriesTable">
+        <tr>
+            <th>Name</th>
+            <th>Country Code</th>
+            <th>Population</th>
+        </tr>
+        <tr *ngFor="let cnt of countries" (click)="onCountryClick(cnt)">
+            <td>{{cnt.name}}</td>
+            <td>{{cnt.countryCode}}</td>
+            <td>{{cnt.population}}</td>
+        </tr>
+        
+    </table>
+</div>
