@@ -13,8 +13,10 @@ export class AppFooterComponent implements OnInit {
     }
     ngOnInit() { }
     
-    isActive(instruction: any[]): boolean {
-        return this.router.isRouteActive(this.router.generate(instruction));
+    
+    // this function returns whether the current route is the route passed in the function
+    isActive(route: any[]): boolean {
+        return this.router.isRouteActive(this.router.generate(route));
     }
 
 }

@@ -3,7 +3,7 @@
 .btn{
     border:1px solid grey;
     border-radius: 4px;
-    padding: 4px;
+    padding: 4px 10px;
     color:black;
     
 }
@@ -24,12 +24,8 @@
     -moz-transition: 0.4s all ease;
     transition: 0.4s all ease;
 }
-a.btn{
+a{
     text-decoration: none;
-}
-
-.main-view-container{
-    margin: 40px;
 }
 
 /* APP COMPONENT STYLES*/

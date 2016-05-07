@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewEncapsulation} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
-import {HomeComponent} from './main/home/home.component';
-import {CountriesComponent} from './main/countries/countries.component';
 import {AppHeaderComponent} from './app-header/app-header.component';
 import {AppFooterComponent} from './app-footer/app-footer.component';
 import {MainComponent} from './main/main.component';
+import {HomeComponent} from './main/home/home.component';
+import {CountriesComponent} from './main/countries/countries.component';
+import {CountryComponent} from './main/country/country.component';
+
 @Component({
     moduleId:'appModule',
     selector: 'app',
@@ -15,7 +17,7 @@ import {MainComponent} from './main/main.component';
     encapsulation: ViewEncapsulation.None
 })
 
-
+// defining routes here
 @RouteConfig([
   {
     path: '/home',
@@ -27,6 +29,11 @@ import {MainComponent} from './main/main.component';
     path: '/countries',
     name: 'Countries',
     component:CountriesComponent
+  },
+   {
+    path: '/country/:code',     // eg localhost:3000/country/US, localhost:3000/country/PK etc
+    name: 'Country',
+    component:CountryComponent
   }
 ])
 
@@ -34,9 +41,8 @@ import {MainComponent} from './main/main.component';
 export class AppComponent implements OnInit {
     constructor() { }
     
-    ngOnInit() { 
-        
-        console.log("init");
+    ngOnInit() {
+        console.log("app initiated");
     }
 
 }
